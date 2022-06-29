@@ -21,4 +21,8 @@ public class PostRepository {
     public Post selectPostById(long postId) {
         return new Post(postId, "제목입니다.", "lee", "조회하신 내용입니다.", 0);
     }
+
+    public Post insertPost(Post post) {
+        return post;
+    }
 }

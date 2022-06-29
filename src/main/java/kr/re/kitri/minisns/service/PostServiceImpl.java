@@ -22,4 +22,9 @@ public class PostServiceImpl implements PostService {
     public Post getPostById(long postId) {
         return postRepository.selectPostById(postId);
     }
+
+    @Override
+    public Post setPost(Post post) {
+        return postRepository.insertPost(post);
+    }
 }
