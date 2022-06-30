@@ -4,6 +4,8 @@ import kr.re.kitri.minisns.model.Article;
 import kr.re.kitri.minisns.model.Post;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,6 +18,7 @@ public class PostRepository {
                 new Post(3, "세번째 글", "park", "세번째 쓰는 글이에요", 20)
         );
         return posts;
+
     }
 
     public Post selectPostById(long postId) {
