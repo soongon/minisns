@@ -4,4 +4,25 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.re.kitri.minisns.repository.PostRepository">
 
+    <select id="selectAllPosts" resultType="kr.re.kitri.minisns.model.Post">
+        select  post_id as postId,
+                title,
+                author,
+                body,
+                likes
+        from    post
+    </select>
+
+    <select id="selectPostById"
+            parameterType="long"
+            resultType="kr.re.kitri.minisns.model.Post">
+        select  post_id as postId,
+                title,
+                author,
+                body,
+                likes
+        from    post
+        where   post_id = #{postId}
+    </select>
+
 </mapper>
