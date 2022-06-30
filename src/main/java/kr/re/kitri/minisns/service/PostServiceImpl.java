@@ -20,6 +20,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Post getPostById(long postId) {
+
         return postRepository.selectPostById(postId);
     }
 
