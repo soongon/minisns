@@ -17,5 +17,5 @@ public interface PostRepository {
 
     Post selectPostById(long postId);
 
-    Post insertPost(Post post);
+    void insertPost(Post post);
 }

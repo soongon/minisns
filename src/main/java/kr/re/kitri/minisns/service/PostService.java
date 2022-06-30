@@ -9,6 +9,6 @@ public interface PostService {
 
     Post getPostById(long postId);
 
-    Post setPost(Post post);
+    void setPost(Post post);
 
 }

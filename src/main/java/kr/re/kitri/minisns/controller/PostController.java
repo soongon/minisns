@@ -25,6 +25,7 @@ public class PostController {
 
     @PostMapping("/posts")
     public Post registPost(@RequestBody Post post) {
-        return postService.setPost(post);
+        postService.setPost(post);
+        return post;
     }
 }

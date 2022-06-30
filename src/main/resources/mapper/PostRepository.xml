@@ -24,5 +24,10 @@
         from    post
         where   post_id = #{postId}
     </select>
+    
+    <insert id="insertPost" parameterType="kr.re.kitri.minisns.model.Post">
+        insert into post (post_id, title, author, body, likes)
+        values (#{postId}, #{title}, #{author}, #{body}, #{likes})
+    </insert>
 
 </mapper>
