@@ -10,13 +10,13 @@ import java.util.List;
 @Service
 public class PostServiceImpl implements PostService {
 
-    @Autowired
-    private PostRepository postRepository;
+    @Autowired private PostRepository postRepository;
 
     @Override
     public List<Post> getAllPosts() {
         return postRepository.selectAllPosts();
     }
+
 
     @Override
     public Post getPostById(long postId) {
