@@ -20,9 +20,7 @@ public class PostController {
     @GetMapping("/posts")
     public List<Post> viewAllPosts() {
         // 누가 언제 이함수를 왜? 호출했다.
-        logger.debug("debug 로그 남겨요...... ");
-        logger.info("info 로그 남겨요...... ");
-        logger.error("error 로그 남겨요...... ");
+
         return postService.getAllPosts();
     }
 

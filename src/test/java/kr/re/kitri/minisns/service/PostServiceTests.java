@@ -2,6 +2,7 @@ package kr.re.kitri.minisns.service;
 
 import kr.re.kitri.minisns.model.Post;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,6 +18,7 @@ public class PostServiceTests {
     private PostService postService;
 
     @Test
+    @Disabled
     public void testGetAllPosts() {
         // getAllPosts 함수를 호출한다.
         // 결과를 반환할건데.. 반환된 결과를 가지고 성공/실패를 판단.
@@ -35,4 +37,9 @@ public class PostServiceTests {
 
     // 상세조회 시나리오
     // 1번 글을 조회해서 타이틀 속성이 "first" 이면 성공
+    @Test
+    public void testGetPostById() {
+        Post post = postService.getPostById(1);
+        assertEquals("first", post.getTitle());
+    }
 }
