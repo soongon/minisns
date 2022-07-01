@@ -4,6 +4,7 @@ import kr.re.kitri.minisns.model.Post;
 import kr.re.kitri.minisns.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -25,6 +26,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    @Transactional
     public void setPost(Post post) {
         postRepository.insertPost(post);
     }
