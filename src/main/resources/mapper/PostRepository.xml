@@ -10,7 +10,7 @@
                 author,
                 body,
                 likes
-        from    posts
+        from    post
     </select>
 
     <select id="selectPostById"

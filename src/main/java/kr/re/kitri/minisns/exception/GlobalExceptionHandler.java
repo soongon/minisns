@@ -11,6 +11,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = BadSqlGrammarException.class)
     public ErrorModel handleBSGException(BadSqlGrammarException e) {
+        System.out.println("로그입니다.");
         return new ErrorModel(510, "잘못된 SQL 문법", e.getMessage());
     }
 
